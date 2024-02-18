@@ -1,7 +1,6 @@
 import { Stack } from "@mui/material";
 import { TaskForm } from "components/molecules";
-import { Page } from "components/render";
-import SuspenseLoader from "components/render/SuspenseLoader";
+import { Page, SuspenseLoader } from "components/render";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getTask, updateTask as updateTaskService } from "services";
