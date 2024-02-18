@@ -1,6 +1,7 @@
 import { Stack } from "@mui/material";
-import { Pagination, TodoCard } from "components/molecules";
+import { Pagination } from "components/molecules";
 import { useState } from "react";
+import TodoCard from "./TodoCard";
 
 const TODOS_PER_PAGE = 10;
 
@@ -24,9 +25,9 @@ const TodosList = ({ todos = [] }) => {
       {currentTodos?.map(({ id, title, completed }) => (
         <TodoCard
           key={id}
+          id={id}
           title={title}
           completed={completed}
-          showIconButtons
         />
       ))}
       <Pagination
